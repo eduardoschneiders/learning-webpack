@@ -1,10 +1,11 @@
 from node:10
-WORKDIR /app/server
-COPY server/package.json /app/server
-RUN npm install
-
+WORKDIR /app/
 COPY . /app
 
-EXPOSE 3000
+RUN cd /app/server && npm install
+RUN cd /app/client && npm install
 
-CMD npm start
+EXPOSE 3000
+EXPOSE 8080
+
+CMD ./run.sh

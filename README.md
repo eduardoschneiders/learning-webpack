@@ -1,5 +1,6 @@
 docker build . -t webpack-study
 docker run -p 3000:3000 -it -v $(PWD):/app webpack-study bash
+docker run -p 80:8080 -p 3000:3000 -it webpack-study
 
 
 Comands:
