@@ -2,6 +2,9 @@ import 'core-js/es7/reflect';
 
 import { NegociacaoController } from './controllers/NegociacaoController.js';
 import { Negociacao } from './domain/index.js';
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap/dist/css/bootstrap-theme.css'
+import '../css/main.css'
 
 const controller = new NegociacaoController();
 const negociacao = new Negociacao(new Date(), 1, 200);
